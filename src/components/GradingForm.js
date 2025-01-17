@@ -224,3 +224,42 @@ const GradingForm = () => {
                         onChange={(e) => handleDeductionChange(sectionId, deduction.id, parseInt(e.target.value))}
                         className="w-16 p-1 border rounded"
                       />
+                      <label>{deduction.label}</label>
+                    </div>
+                  ))}
+                </div>
+              )}
+              
+              <div className="mt-4">
+                <textarea
+                  placeholder="Additional comments for this section..."
+                  value={comments[sectionId] || ''}
+                  onChange={(e) => handleCommentChange(sectionId, e.target.value)}
+                  className="w-full p-2 border rounded"
+                  rows="2"
+                />
+              </div>
+              
+              <div className="mt-2 text-right">
+                Section Score: {calculateSectionScore(section, sectionId).toFixed(2)}%
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      ))}
+      
+      <Card>
+        <CardContent className="mt-4">
+          <div className="flex justify-between items-center">
+            <h3 className="text-xl font-bold">Total Score: {calculateTotalScore().toFixed(2)}%</h3>
+            <Button onClick={copyFeedback} className="flex items-center space-x-2">
+              <span>Copy Feedback</span>
+            </Button>
+          </div>
+        </CardContent>
+      </Card>
+    </div>
+  );
+};
+
+export default GradingForm;
