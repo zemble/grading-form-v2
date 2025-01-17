@@ -267,7 +267,7 @@ const GradingForm = () => {
         { id: "subheaders", label: "Clear subheaders throughout", points: 5 },
         { id: "spacing", label: "Proper spacing between sections", points: 2 },
         { id: "pageLimit", label: "Within 3-page limit", points: 5 },
-        { id: "noAppendices", label: "No appendices", points: 5 },
+        { id: "noAppendices", label: "Clearly written", points: 5 },
         { id: "bulletLength", label: "Bullet points ≤ 2 lines", points: 2 },
         { id: "paragraphLength", label: "Paragraphs ≤ 5 lines", points: 2 }
       ],
