@@ -19,39 +19,232 @@ const GradingForm = () => {
         { id: "introduction", label: "Clear and accurate introduction", points: 1 }
       ]
     },
+ // Modified sections of GradingForm.js
+// Replace the corresponding sections in the sections object
+
     peste: {
       title: "Context - PESTE Analysis (20%)",
       items: [
-        { id: "political", label: "Political - 3+ future-focused points with citations", points: 4 },
-        { id: "economic", label: "Economic - 3+ future-focused points with citations", points: 4 },
-        { id: "social", label: "Social - 3+ future-focused points with citations", points: 4 },
-        { id: "technological", label: "Technological - 3+ future-focused points with citations", points: 4 },
-        { id: "environmental", label: "Environmental - 3+ future-focused points with citations", points: 4 }
-      ],
-      deductions: [
-        { id: "industryFocus", label: "Not focused on industry (-5%)", value: 5 },
-        { id: "futureFocus", label: "Not future-focused (-5%)", value: 5 },
-        { id: "citations", label: "Missing APA citations (-2% per section)", value: 2 }
+        {
+          id: "political_factors",
+          label: "Political - included 3 factors",
+          points: 1
+        },
+        {
+          id: "political_future",
+          label: "Political - is future focused",
+          points: 1
+        },
+        {
+          id: "political_industry",
+          label: "Political - is industry focused",
+          points: 1
+        },
+        {
+          id: "political_citations",
+          label: "Political - all factors use correct APA citations",
+          points: 1
+        },
+        {
+          id: "economic_factors",
+          label: "Economic - included 3 factors",
+          points: 1
+        },
+        {
+          id: "economic_future",
+          label: "Economic - is future focused",
+          points: 1
+        },
+        {
+          id: "economic_industry",
+          label: "Economic - is industry focused",
+          points: 1
+        },
+        {
+          id: "economic_citations",
+          label: "Economic - all factors use correct APA citations",
+          points: 1
+        },
+        {
+          id: "social_factors",
+          label: "Social - included 3 factors",
+          points: 1
+        },
+        {
+          id: "social_future",
+          label: "Social - is future focused",
+          points: 1
+        },
+        {
+          id: "social_industry",
+          label: "Social - is industry focused",
+          points: 1
+        },
+        {
+          id: "social_citations",
+          label: "Social - all factors use correct APA citations",
+          points: 1
+        },
+        {
+          id: "tech_factors",
+          label: "Technological - included 3 factors",
+          points: 1
+        },
+        {
+          id: "tech_future",
+          label: "Technological - is future focused",
+          points: 1
+        },
+        {
+          id: "tech_industry",
+          label: "Technological - is industry focused",
+          points: 1
+        },
+        {
+          id: "tech_citations",
+          label: "Technological - all factors use correct APA citations",
+          points: 1
+        },
+        {
+          id: "env_factors",
+          label: "Environmental - included 3 factors",
+          points: 1
+        },
+        {
+          id: "env_future",
+          label: "Environmental - is future focused",
+          points: 1
+        },
+        {
+          id: "env_industry",
+          label: "Environmental - is industry focused",
+          points: 1
+        },
+        {
+          id: "env_citations",
+          label: "Environmental - all factors use correct APA citations",
+          points: 1
+        }
       ]
     },
     swot: {
       title: "Company - SWOT Analysis (15%)",
       items: [
-        { id: "strengths", label: "Strengths - 3+ points on internal capabilities", points: 3.75 },
-        { id: "weaknesses", label: "Weaknesses - 3+ points on internal limitations", points: 3.75 },
-        { id: "opportunities", label: "Opportunities - 3+ points on external possibilities", points: 3.75 },
-        { id: "threats", label: "Threats - 3+ points on external challenges", points: 3.75 }
+        {
+          id: "strengths_genuine",
+          label: "Strengths - 2 or more genuine strengths or capabilities (not results)",
+          points: 1
+        },
+        {
+          id: "strengths_sense",
+          label: "Strengths - Makes sense for the brand",
+          points: 1
+        },
+        {
+          id: "strengths_clear",
+          label: "Strengths - Clearly written",
+          points: 1
+        },
+        {
+          id: "weaknesses_genuine",
+          label: "Weaknesses - 2 or more likely weaknesses or problems (not results)",
+          points: 1
+        },
+        {
+          id: "weaknesses_sense",
+          label: "Weaknesses - Makes sense for the brand",
+          points: 1
+        },
+        {
+          id: "weaknesses_clear",
+          label: "Weaknesses - Clearly written",
+          points: 1
+        },
+        {
+          id: "opportunities_count",
+          label: "Opportunities - 2 or more opportunities",
+          points: 1
+        },
+        {
+          id: "opportunities_external",
+          label: "Opportunities - Based on explained external changes",
+          points: 1
+        },
+        {
+          id: "opportunities_citations",
+          label: "Opportunities - APA references included",
+          points: 1
+        },
+        {
+          id: "threats_count",
+          label: "Threats - 2 or more threats",
+          points: 1
+        },
+        {
+          id: "threats_external",
+          label: "Threats - Based on explained external changes",
+          points: 1
+        },
+        {
+          id: "threats_citations",
+          label: "Threats - APA references included",
+          points: 1
+        }
       ]
     },
     competition: {
       title: "Competition Analysis (20%)",
       items: [
-        { id: "criteria", label: "5+ choice criteria with explanations", points: 6 },
-        { id: "competitors", label: "5+ competitors with citations and annotations", points: 8 },
-        { id: "chart", label: "Comparative chart (2+ criteria, 4+ competitors)", points: 6 }
+        {
+          id: "choice_factors_included",
+          label: "Choice factors included",
+          points: 2
+        },
+        {
+          id: "choice_factors_explained",
+          label: "Choice factors all explained",
+          points: 6
+        },
+        {
+          id: "competing_brands",
+          label: "Competing brands introduced and explained with citations",
+          points: 4
+        },
+        {
+          id: "chart_competitors",
+          label: "Chart compares 4 or more competitors",
+          points: 4
+        },
+        {
+          id: "chart_criteria",
+          label: "Chart compares 3 or more choice criteria",
+          points: 4
+        }
+      ],
+      deductions: [
+        {
+          id: "fewer_choice_factors",
+          label: "Fewer than 5 choice factors (-1%)",
+          value: 1
+        },
+        {
+          id: "unexplained_factors",
+          label: "Choice factors not explained (-2%)",
+          value: 2
+        },
+        {
+          id: "fewer_competitors",
+          label: "Fewer than 3 competing brands (-1%)",
+          value: 1
+        },
+        {
+          id: "incomplete_chart",
+          label: "Chart exists but has fewer than 4 brands and/or fewer than 3 choice factors (-2%)",
+          value: 2
+        }
       ]
     },
-    collaborators: {
+        collaborators: {
       title: "Collaborators (10%)",
       items: [
         { id: "suppliers", label: "Suppliers listed with citations", points: 3.33 },
